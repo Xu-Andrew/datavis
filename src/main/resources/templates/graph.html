@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Data Visualization</title>
+
+    <!-- c3 -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.13/c3.min.css"/>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.13/c3.min.js"></script>
+
+    <!-- Load graph.js -->
+    <script type="text/javascript" th:src="@{/js/src/graph.js}"></script>
+</head>
+<body>
+    <h1>Data Visualization (Finance)</h1>
+    <div>
+        <form action="javascript:;" onsubmit="renderChart(this)">
+            <table>
+                <tr>
+                    <th>
+                        Data Filter
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="ticker"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Generate Graph"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div>
+        <div id="chart"></div>
+    </div>
+</body>
+</html>

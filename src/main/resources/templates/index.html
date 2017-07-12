@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>DataVis</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css" th:href="@{/css/index.css}"/>
+
+    <!-- c3 -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.13/c3.min.css"/>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.13/c3.min.js"></script>
+</head>
+<body>
+    <!--/*@thymesVar id="message" type="java.lang.String"*/-->
+    <h1 th:text="${message}">Default</h1>
+
+    <h2>Request Stock Info</h2>
+    <button id="chartButton">Chart</button>
+    <div id="chart"></div>
+    <button id="stockButton">Go</button>
+    <div id="renderTarget">Stock Info:</div>
+
+
+    <!-- Load c3.css -->
+    <!--<link rel="stylesheet" type="text/css" href="../static/js/lib/c3-0.4.13/c3.min.css" th:href="@{/js/lib/c3-0.4.13/c3.min.css}"/>-->
+
+    <!-- Load d3.js and c3.js -->
+    <!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+    <!--<script type="text/javascripte" th:src="@{/js/lib/c3-0.4.13/c3.min.js}"></script>-->
+
+    <!-- Load index.js -->
+    <script type="text/javascript" th:src="@{/js/src/index.js}"></script>
+</body>
+</html>

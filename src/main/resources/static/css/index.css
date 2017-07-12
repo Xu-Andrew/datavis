@@ -1,0 +1,8 @@
+#stockButton {
+    border: black;
+}
+
+#stockButton:hover {
+    color: lightgray;
+}
+
